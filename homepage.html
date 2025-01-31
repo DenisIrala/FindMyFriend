@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link href="css/homepage.css" rel="stylesheet">
+</head>
+<body>
+<div id="page-container">
+    <div id="nav-bar">
+        <div id="logo-container"></div>
+        <div id="logout"></div>
+        <div id="contacts"></div>
+        <div id="about-us"></div>
+    </div>
+    <div id="main-page">
+        <div id="welcome-header">
+        </div>
+        <div id="body-container">
+            <div id="search-container">
+                <form action="/LAMPAPI/SearchContacts.php" method="post">
+                    <label for="search">Search For Contacts</label>
+                    <input type="text" id="query" name="query" placeholder="Ex: Jason Bourne">
+                    <button>Submit</button>
+                    <button>Reload</button>
+                    <button>Add</button>
+                    <dialog open>
+                        <form action="/LAMPAPI/AddContacts.php">
+                            <label for="firstname"></label>
+                            <input type="text" id="firstname" name="firstname" placeholder="First Name"/>
+                            <label for="lastname"></label>
+                            <input type="text" id="lastname" name="lastname" placeholder="Last Name"/>
+                            <label for="phone"></label>
+                            <input type="number" id="phone-number" name="phone-number" placeholder="700-700-0000"/>
+                            <label for="email"></label>
+                            <input type="email" id="email" name="email"/>
+                            <button>Add Contact</button>
+                        </form>
+                    </dialog>
+                </form>
+
+            </div>
+            <div id="saved-contact"></div>
+            <div id="results-container">
+                <!-- Dynamically populate a grid containing n rows -->
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,12 +1,12 @@
 
-body 
+/* body 
 {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 
-}
+} */
 
 h1{
     width: auto;
@@ -168,10 +168,6 @@ body {
     background-position: center;
 } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
 
-.container{
-    justify-content: center;
-    align-items: center;
-}
 
 input {
     font-family: sans-serif;                
@@ -276,3 +272,4 @@ select{
     font-family: 'Ubuntu', sans-serif;
     color: #95060a;
 }
+

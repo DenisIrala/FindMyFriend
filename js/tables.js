@@ -131,3 +131,24 @@ function searchContact()
 	}
 	
 }
+
+// Function to add a new row with either predefined data or input fields
+function addRow() {
+
+    if (!table) {
+        console.error("Table tbody not found!");
+        return;
+    }
+
+	
+    let table = document.getElementById("contact-table").getElementsByTagName("tbody")[0];
+    let newRow = table.insertRow();
+
+    // Insert new cells with input fields
+    newRow.insertCell(0).innerHTML = `<input type="text" placeholder="First Name">`;
+    newRow.insertCell(1).innerHTML = `<input type="text" placeholder="Last Name">`;
+    newRow.insertCell(2).innerHTML = `<input type="email" placeholder="Email">`;
+    newRow.insertCell(3).innerHTML = `<input type="tel" placeholder="Phone Number">`;
+
+
+}

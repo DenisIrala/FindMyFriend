@@ -1,0 +1,36 @@
+#contact-table {
+    width: 100%; 
+    border-collapse: collapse;
+    table-layout: fixed; 
+    text-align: center;
+}
+
+#contact-table th, .contact-table td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    width: 20%; 
+}
+
+#contact-table th {
+    background-color: #c2c0c0;
+    font-weight: bold;
+}
+
+#contact-table thead {
+    display: table;
+    width: 100%;
+}
+
+#contact-table tbody {
+    background-color: white;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.search-container {
+    width: 80vw;
+    margin: 20vh auto;
+}
+
