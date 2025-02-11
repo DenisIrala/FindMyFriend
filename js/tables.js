@@ -82,10 +82,13 @@ addButton.addEventListener('click', (event) => {
 		}
 
 		if (!isValid) {
+			event.preventDefault();
 			return;
 		}
-
-		});
+		else {
+			addContact(); 
+		}
+	});
 
 		document.getElementById("FirstName").addEventListener('input', function() {
 			if(this.value.trim() !== "") {
@@ -106,6 +109,7 @@ addButton.addEventListener('click', (event) => {
 			  phoneError.style.display = "none";
 			  newPhone.style.border = "none";
 			}
+		});
 		  
 		  document.getElementById("EmailAddress").addEventListener('input', function() {
 			if(validateEmail(this.value.trim())) {
@@ -113,9 +117,6 @@ addButton.addEventListener('click', (event) => {
 			  newEmail.style.border = "none";
 			}
 		  });  
-
-		addContact(); 
-});
 
 searchButton.addEventListener('click', () => {
 	searchContact();
@@ -488,11 +489,11 @@ window.addEventListener('click', (event) => {
 
 function validateFields(newFirstName,newLastName,newPhone,newEmail){
 
-	function validateEmail(email) {
+	/*function validateEmail(email) {
 		var re = /\S+@\S+\.\S+/;
 		return re.test(email.strip());
-	}
-
+	}*/
+	
 	return ((newFirstName != "") || (newLastName != "") || (newPhone.length == 10 && !isNaN(newPhone)) || (validateEmail(newEmail)))
 }
 
